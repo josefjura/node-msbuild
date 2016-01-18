@@ -1,0 +1,22 @@
+{
+  "name": "node-msbuild",
+  "version": "0.1.0",
+  "description": "Node module for work with msbuild",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josefjura/node-msbuild.git"
+  },
+  "keywords": [
+    "msbuild"
+  ],
+  "author": "Josef Jura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josefjura/node-msbuild/issues"
+  },
+  "homepage": "https://github.com/josefjura/node-msbuild#readme"
+}
