@@ -1,8 +1,8 @@
 {
   "name": "node-msbuild",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node module for work with msbuild",
-  "main": "js/main.js",
+  "main": "js/node-msbuild.js",
   "scripts": {
     "test": "npm test"
   },
@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/josefjura/node-msbuild/issues"
   },
-  "homepage": "https://github.com/josefjura/node-msbuild#readme"
+  "homepage": "https://github.com/josefjura/node-msbuild#readme",
+  "devDependencies": {
+    "fs-jetpack": "^0.7.1",
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.10.0",
+    "merge2": "^0.3.6",
+    "tsc": "^1.20150623.0",
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.5"
+  }
 }
