@@ -1,4 +1,4 @@
-# node-msbuild
+# node-msbuild [![npm version](https://badge.fury.io/js/node-msbuild.svg)](https://badge.fury.io/js/node-msbuild)
 Node Module for calling MSBuild
 
 ```js
