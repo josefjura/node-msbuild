@@ -43,12 +43,10 @@ export class MsBuild {
 
         let parameters = [options.SolutionFile, target];
 
-        if (options.BuildProjectReferences){
-            parameters.push('/p:BuildProjectReferences=true');
-        }
+        parameters.push('/p:BuildProjectReferences=' +  options.BuildProjectReferences);
 
-        if (!options.ShowLogo)
-        {
+
+        if (!options.ShowLogo) {
             parameters.push('/nologo');
         }
 
