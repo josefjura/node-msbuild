@@ -43,7 +43,7 @@ export class MsBuild {
 
         let parameters = [options.SolutionFile, target];
 
-        parameters.push('/p:BuildProjectReferences=' +  options.BuildProjectReferences);
+        parameters.push('/p:BuildProjectReferences=' + options.BuildProjectReferences);
 
 
         if (!options.ShowLogo) {
@@ -61,6 +61,14 @@ export class MsBuild {
 
         if (options.ErrorsOnly)
             parameters.push('/clp:ErrorsOnly');
+
+        if (options.DeployOnBuild) {
+            parameters.push('/p:DeployOnBuild=' + options.DeployOnBuild);
+        }
+
+        if (options.PublishProfile) {
+            parameters.push('/p:PublishProfile=' + options.PublishProfile);
+        }
 
         return {
             File: this.options.MsBuildPath,
@@ -109,4 +117,6 @@ export interface BuildOptions {
     Platform?: string;
     BuildProjectReferences?: boolean;
     ShowLogo?: boolean;
+    DeployOnBuild?: boolean;
+    PublishProfile?: string;
 }

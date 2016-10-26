@@ -43,6 +43,12 @@ var MsBuild = (function () {
         }
         if (options.ErrorsOnly)
             parameters.push('/clp:ErrorsOnly');
+        if (options.DeployOnBuild) {
+            parameters.push('/p:DeployOnBuild=' + options.DeployOnBuild);
+        }
+        if (options.PublishProfile) {
+            parameters.push('/p:PublishProfile=' + options.PublishProfile);
+        }
         return {
             File: this.options.MsBuildPath,
             Params: parameters
