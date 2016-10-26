@@ -4,7 +4,8 @@
   "description": "Node module for work with msbuild",
   "main": "js/node-msbuild.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "postinstall": "tsd install"
   },
   "repository": {
     "type": "git",
