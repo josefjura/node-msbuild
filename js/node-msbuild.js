@@ -1,4 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
+"use strict";
 var childProcess = require('child_process');
 var Q = require('q');
 var MsBuild = (function () {
@@ -62,5 +63,5 @@ var MsBuild = (function () {
         }
     };
     return MsBuild;
-})();
+}());
 exports.MsBuild = MsBuild;
