@@ -1,4 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
+"use strict";
 var childProcess = require('child_process');
 var Q = require('q');
 var MsBuild = (function () {
@@ -42,6 +43,12 @@ var MsBuild = (function () {
         }
         if (options.ErrorsOnly)
             parameters.push('/clp:ErrorsOnly');
+        if (options.DeployOnBuild) {
+            parameters.push('/p:DeployOnBuild=' + options.DeployOnBuild);
+        }
+        if (options.PublishProfile) {
+            parameters.push('/p:PublishProfile=' + options.PublishProfile);
+        }
         return {
             File: this.options.MsBuildPath,
             Params: parameters
@@ -62,5 +69,5 @@ var MsBuild = (function () {
         }
     };
     return MsBuild;
-})();
+}());
 exports.MsBuild = MsBuild;
