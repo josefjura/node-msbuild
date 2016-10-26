@@ -12,7 +12,8 @@ Node Module for calling MSBuild
     // Build options
     var options = {
         Rebuild: false,
-        SolutionFile: "MySolution.sln",
+
+SolutionFile: "MySolution.sln",
         // ... etc
     };
 
@@ -21,7 +22,8 @@ Node Module for calling MSBuild
     .then(function(results){
         console.log("Called params : " + results.CmdLine);
         console.log("Result code: " + results.Code);
-    });
+
+});
 ```
 
 ## Build options
@@ -72,3 +74,13 @@ Determines if project references will also be built
 Type: *boolean*
 
 Determines if the MS Build logo will be shown before build
+
+### DeployOnBuild
+Type: *boolean*
+
+Determines if there should be a deploy after the build
+
+### PublishProfile
+Type: *string*
+
+Publish profile name used when deploying
