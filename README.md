@@ -25,6 +25,7 @@ SolutionFile: "MySolution.sln",
 
 });
 ```
+**Important!** The constructor parameter MsBuildPath is currently not validated and must be set to a valid msbuild.exe path which can be different from the one in this example.
 
 ## Build options
 
